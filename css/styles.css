@@ -1,10 +1,16 @@
-* {
-    box-sizing: border-box;
+@font-face {
+    font-family: 't';
+    src: url('../fonts/Regista.ttf');
 }
 
 @font-face {
-    font-family: 't';
-    src: url('fonts/Regista.ttf')}
+    font-family: 'titulodos';
+    src: url('../fonts/Melted\ Cheese.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -13,9 +19,9 @@ body {
     font-size: 120%;
     font-weight: bold;
     color: rgb(255, 255, 255);
-    text-align: center;
     justify-content: center;
     align-content: center;
+    background-image: url(/images/44bf8b5a11f4cedff5c1c2778b0f7b9c.gif);
 }
 
 .container {
@@ -23,33 +29,82 @@ body {
     border-color: rgb(255, 255, 255);
     border-width: 7px ;
     padding: 2px;
+    overflow: hidden;
+    size: 900px;
 }
 
 .titulo {
     font-family: 't';
+    font-size: 5rem;
+    font-style: oblique;
+    text-align: center;
+    text-shadow: 4px 3px 5px rgb(104, 22, 255);
+}
+
+.container-fluid {
+  background-color: #0c0c0c;
+}
+
+.navbar-brand {
+  color: rgb(98, 0, 255);
+}
+
+.btn-outline-success {
+  color: rgb(98, 0, 255);
+}
+
+.tituloo {
+    align-content: center;
+}
+
+.neon {
+  font-size: 3em;
+  color: #ffffff;
+  letter-spacing: 5px;
+  cursor:crosshair;
+  text-transform:initial;
+  transition: 3s;
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+.neon:hover {
+  color: #f6c7ff;
+}
+
+.tdos {
+    font-family: 'titulodos';
+    font-size: 37px;
+    text-shadow: 2px 1px 1px rgb(0, 0, 0);
+    text-align: center;
 }
 
 p {
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size:small
-}
+    font-size:12px;
+    animation-duration: 1s;
+    animation-name: slidein;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 h3 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: aliceblue;
 }
-
-a:link
-a:visited {
-   color: chartreuse;
-   font-weight: bold;
-}
-
-
-a:hover {
-    color: orange;
-  }
 
 article p::first-letter {
     font-size: 120%;
@@ -58,7 +113,7 @@ article p::first-letter {
 }   
 
 .alturaunoa {
-    height: 300px;
+    height: 310px;
 }
 
 .alturaunob {
@@ -67,39 +122,405 @@ article p::first-letter {
 
 
 .unouno {
-    background-color: rgb(253, 106, 204);
+    background: linear-gradient(130deg, rgb(89, 23, 243), 63%, rgb(58, 10, 87));
+    border-style:double;
+    border-width: 3px;
+    text-align: center;
 }
 
 .dosdos {
-    background-color: rgb(140, 213, 231);
+    background-color:rgb(92, 48, 252);
+    border-style:double;
+    border-width: 3px;
+    text-align: center;
 }
 
 .trestres {
-    background-color: rgb(247, 172, 81);
+    background-color: rgb(121, 19, 255);
+    border-style:double;
+    border-width: 3px;
+    text-align: center;
 }
 
-input[type=color]::-moz-color-swatch {
-    border-radius: 10px;
-    border-style: none;
-  }
-
-  button::-moz-focus-inner,
-input[type="color"]::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner {
-  padding-block-start: 0px;
-  padding-inline-end: 2px;
-  padding-block-end: 0px;
-  padding-inline-start: 2px;
-  border: 2px dotted red;
+.trestresd {
+  background-color: rgb(145, 84, 243);
+  border-style:double;
+  border-width: 3px;
 }
 
-::-moz-progress-bar {
-    background-color: red;
+.solo {
+  background-color: #0c0c0c;
+}
+
+/*primero*/
+a:link { color: blue; }          /* Enlaces no visitados */
+a:visited { color: purple; }     /* Enlaces visitados */
+a:hover { background: yellow; }  /* El usuario esta sobre el enlace */
+a:active { color: rgb(76, 0, 255); }        /* Enlaces activos */
+
+
+
+/*segundo*/
+a:any-link {
+  border: 1px solid rgb(255, 0, 106);
+  color: rgb(138, 255, 220);
+}
+
+/* navegadores WebKit */
+a:-webkit-any-link {
+  border: 1px solid blue;
+}
+
+.d {
+  font-size: medium;
+}
+
+/*tercero*/
+.exclusivethree::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: brown;
+}
+
+/*cuatro*/
+.exclusivefour::first-line {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration:line-through
+}
+
+/*cinco*/
+/* Etiquetas para entradas marcadas */
+input:checked + label {
+  color: red;
+}
+
+/*seis*/
+input:default {
+  box-shadow: 0 0 2px 1px coral;
+}
+
+
+/*siete*/  
+/* Give the two elements distinctive backgrounds */
+.siete {
+  background: rgb(255, 147, 174);
+}
+
+simple-custom {
+  background: cyan;
+}
+
+/* Both the custom and the built-in element are given italic text */
+:defined {
+  font-style: italic;
+}
+
+/*ocho*/
+:dir(ltr) {
+  background-color: none;
+}
+
+:dir(rtl) {
+  background-color: none;
+}
+
+/*nueve*/
+input[type="text"]:disabled {
+  background: #ccc;
+}
+
+/*diez*/
+.box {
+  background: rgb(212, 82, 147);
+  height: 30px;
+  width: 250px;
+}
+
+.box:empty {
+  background: lime;
+}
+
+/*once*/
+input:enabled {
+  color: rgb(67, 34, 187);
+}
+
+input:disabled {
+  color: #aaa;
+}
+
+/*doce*/
+@page :first {
+  margin-left: 50%;
+  margin-top: 50%;
+}
+
+p {
+  page-break-after: always;
+}
+
+/*trece*/
+p:first-child {
+  color: lime;
+  background-color: black;
+  padding: 5px;
+}
+
+/*catorce*/
+/* Selecciona cualquier <input> cuando se enfoca */
+input:focus {
+  color: red;
+}
+
+/*quince*/
+.fot:first-of-type {
+  color: red;
+  font-style: italic;
+}
+
+.red-input:focus {
+  background: rgb(139, 226, 212);
+  color: red;
+}
+
+.blue-input:focus {
+  background: rgb(139, 226, 212);
+  color: blue;
+}
+
+/*quince*/
+input, button {
+  margin: 10px;
+}
+
+
+
+.focus-visible-only:focus-visible {
+  outline: 4px dashed rgb(255, 198, 231);
+}
+
+/*dieciseis*/
+form {
+  border: 1px solid;
+  color: gray;
+  padding: 4px;
+}
+
+form:focus-within {
+  background: #ff8;
+  color: black;
+}
+
+input {
+  margin: 4px;
+}
+
+/*diecisiete*/
+/* Selecciona cualquier <div> que se muestre en modo de pantalla completa */
+/* Implementado en Firefox, WebKit/Chrome, y Edge/IE usando prefijos;
+   Edge también es compatible con la versión sin prefijo */
+   div:-moz-full-screen {
+    background-color: pink;
   }
   
-  /* Force indeterminate bars to have zero width */
-  :indeterminate::-moz-progress-bar {
-    width: 0;
+  div:-webkit-full-screen {
+    background-color: pink;
   }
+  
+  div:fullscreen {
+    background-color: pink;
+  }
+
+/*dieciocho*/  
+  #fullscreen:fullscreen {
+    padding: 42px;
+    background-color: pink;
+    border:2px solid #f00;
+    font-size: 200%;
+  }
+  
+  #fullscreen:fullscreen > h1 {
+    color: red;
+  }
+  
+  #fullscreen:fullscreen > p {
+    color: darkred;
+  }
+  
+  #fullscreen:fullscreen > button {
+    display:flexbox
+  }
+
+/*diecinueve*/  
+.veinte {
+  background-color: powderblue;
+  transition: background-color 0.5s;
+}
+
+a:hover {
+  background-color: none;
+}
+
+/*veinte*/  
+input:indeterminate + label {
+  background: lime;
+}
+
+
+/*veintiuno*/  
+li {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+#form1 {
+  width:250px;
+}
+
+#value1 {
+  width:230px;
+  justify-content: left;
+}
+
+input {
+  border: 1px solid black;
+}
+
+input:in-range {
+  background-color: rgba(0, 255, 0, 0.25);
+}
+
+input:out-of-range {
+  background-color: rgba(255, 0, 0, 0.25);
+  border: 1px solid red;
+}
+
+input:in-range + label::after {
+  content: 'bien.';
+}
+
+
+/*veintidos*/  
+input:invalid {
+  background-color: #ffdddd;
+}
+
+form:invalid {
+  border: 5px solid #ffdddd;
+}
+
+input:valid {
+  background-color: #ddffdd;
+}
+
+form:valid {
+  border: 5px solid #ddffdd;
+}
+
+input:required {
+  border-color: #800000;
+  border-width: 3px;
+}
+
+input:required:invalid {
+  border-color: #C00000;
+}
+
+/*veintitres*/ 
+*:lang(en-US) {
+  outline: 2px solid deeppink;
+}
+
+/*veinticuatro*/
+p {
+  font-weight: bold;
+}
+
+li:last-child {
+  border: 2px solid orange;
+}
+
+/*veinticinco*/
+article :last-of-type {
+  background-color: rgb(56, 232, 255);
+}
+
+
+/*veintiseis*/
+.l {
+  font-weight: bold;
+}
+
+a:link {
+  color: forestgreen;
+  text-decoration-color: hotpink;
+}
+
+/*veintisiete*/
+p:not(.irrelevant) {
+  font-weight: bold;
+}
+
+p > strong,
+p > b.important {
+  color: rgb(85, 3, 19);
+}
+
+p > :not(strong, b.important) {
+  color: rgb(126, 178, 255);
+}
+
+
+/*veintiocho*/
+html {
+  font-family: sans-serif;
+}
+
+span,
+div em {
+  padding: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.first span:nth-child(2n+1),
+.second span:nth-child(2n+1),
+.third span:nth-of-type(2n+1) {
+  background-color: rgb(236, 64, 208);
+}
+
+
+/*veintinueve*/
+span:nth-last-of-type(2) {
+  background-color: rgb(236, 64, 208);
+}
+
+
+/*treinta*/
+main :only-child {
+  color: red;
+}
+
+
+/*treintayuno*/
+dd:only-of-type {
+  background-color: rgb(121, 36, 71);
+}
+
+
+/*treintaydos*/
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+.req {
+  color: red;
+}
+
+*:optional {
+  background-color: palegreen;
+}
+
